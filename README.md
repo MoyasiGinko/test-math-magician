@@ -1,2 +1,3 @@
-# test-math-magician
-A test project math magician, a calculator made with react.
+# React app starter project (from scratch)
+
+A lightweight starter project without using the create-react-app CLI
