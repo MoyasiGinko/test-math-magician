@@ -1,5 +1,9 @@
 import TodoItem from '@/components/TodoItem';
+import { useTodosContext } from '@/context/TodosContext';
+
 const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
+  const value = useTodosContext();
+  console.log(value);
   return (
     <ul>
       {todosProps.map((todo) => (
