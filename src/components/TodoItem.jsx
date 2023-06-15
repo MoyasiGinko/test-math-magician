@@ -3,8 +3,10 @@ import { AiFillEdit } from 'react-icons/ai';
 
 import { useState, useRef } from 'react';
 import styles from '@/styles/TodoItem.module.css';
+import { useTodosContext } from '@/context/TodosContext';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({ itemProp }) => {
+  const { handleChange, delTodo, setUpdate } = useTodosContext();
   const editInputRef = useRef(null);
   // const [updateInput, setUpdateInput] = useState(itemProp.title);
   const [editing, setEditing] = useState(false);
