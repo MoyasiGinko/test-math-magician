@@ -1,10 +1,11 @@
 import { FaPlusCircle } from 'react-icons/fa';
-import { useTodosContext } from '@/context/TodosContext';
+// import { useTodosContext } from '@/context/TodosContext';
 
 import { useState } from 'react';
 
+import { useTodosStore } from '@/store';
 const InputTodo = () => {
-  const { addTodoItem } = useTodosContext();
+  const addTodoItem = useTodosStore((state) => state.addTodoItem);
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
   const handleChange = (e) => {
@@ -19,6 +20,7 @@ const InputTodo = () => {
     } else {
       setMessage('Please add item.');
     }
+    // navigate('/', { replace: true });
   };
   return (
     <>

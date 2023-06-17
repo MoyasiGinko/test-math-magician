@@ -1,5 +1,6 @@
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 
 import { useState, useRef } from 'react';
 import styles from '@/styles/TodoItem.module.css';
@@ -76,4 +77,13 @@ const TodoItem = ({ itemProp }) => {
     </li>
   );
 };
+
+TodoItem.propTypes = {
+  itemProp: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
+};
+
 export default TodoItem;

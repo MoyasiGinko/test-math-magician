@@ -1,14 +1,11 @@
-// import { useState, useEffect } from 'react';
 import InputTodo from '@/components/InputTodo';
 import TodosList from '@/components/TodosList';
-import { TodosProvider } from '@/context/TodosContext';
-
 const TodosLogic = () => {
   return (
-    <TodosProvider>
+    <div>
       <InputTodo />
       <TodosList />
-    </TodosProvider>
+    </div>
   );
 };
 export default TodosLogic;
